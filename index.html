@@ -43,10 +43,10 @@
   <div id="popup">☠️ YOUR DEVICE HAS BEEN HACKED ☠️</div>
 
   <!-- Video -->
-  <video id="bdayVideo" controls>
-    <source src="https://github.com/avikabhartia0-beep/CyberSecurity/blob/main/CyberSecurity.mp4" type="video/mp4">
-    Your browser does not support video.
-  </video>
+  <iframe width="640" height="360" 
+        src="https://youtu.be/ca5uBnjR_RQ" 
+        frameborder="0" allowfullscreen>
+  </iframe>
 
   <script>
     window.onload = function() {
@@ -56,7 +56,7 @@
       // Hide video initially
       video.style.display = "none";
 
-      // Show popup for 1.5 seconds
+      // Show popup for 1 seconds
       setTimeout(() => {
         popup.style.display = "none"; // hide popup
         video.style.display = "block"; // show video (but don't autoplay)
@@ -65,5 +65,6 @@
   </script>
 </body>
 </html>
+
 
 
