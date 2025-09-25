@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -29,12 +30,19 @@
       z-index: 1000;
       border: 3px solid #ff0000;
     }
-    video {
+    #videoContainer {
       display: none;
       width: 80%;
-      max-width: 600px;
+      max-width: 640px;
+      height: 360px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -42,32 +50,26 @@
   <!-- Popup Box -->
   <div id="popup">☠️ YOUR DEVICE HAS BEEN HACKED ☠️</div>
 
-  <!-- Video -->
-<iframe width="640" height="360" 
-        src="https://youtu.be/ca5uBnjR_RQ" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-</iframe>
+  <!-- YouTube Video -->
+  <div id="videoContainer">
+    <iframe id="bdayVideo" 
+            src="https://www.youtube.com/watch?v=ca5uBnjR_RQ" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
 
   <script>
     window.onload = function() {
       const popup = document.getElementById("popup");
-      const video = document.getElementById("bdayVideo");
+      const videoContainer = document.getElementById("videoContainer");
 
-      // Hide video initially
-      video.style.display = "none";
-
-      // Show popup for 1 seconds
+      // Show popup for 1.5 seconds
       setTimeout(() => {
-        popup.style.display = "none"; // hide popup
-        video.style.display = "block"; // show video (but don't autoplay)
+        popup.style.display = "none";        // hide popup
+        videoContainer.style.display = "block"; // show YouTube video
       }, 1500);
     }
   </script>
 </body>
 </html>
-
-
-
-
