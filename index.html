@@ -43,10 +43,12 @@
   <div id="popup">☠️ YOUR DEVICE HAS BEEN HACKED ☠️</div>
 
   <!-- Video -->
-  <iframe width="640" height="360" 
+<iframe width="640" height="360" 
         src="https://youtu.be/ca5uBnjR_RQ" 
-        frameborder="0" allowfullscreen>
-  </iframe>
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
 
   <script>
     window.onload = function() {
@@ -60,11 +62,12 @@
       setTimeout(() => {
         popup.style.display = "none"; // hide popup
         video.style.display = "block"; // show video (but don't autoplay)
-      }, 2500);
+      }, 1500);
     }
   </script>
 </body>
 </html>
+
 
 
 
